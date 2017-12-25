@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SnowQueen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="SaveToDB" Height="323.127" Width="247.753">
+    <Grid Margin="0,0,2,0">
+        <TextBox 
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="69,56,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120" 
+            TextChanged="TextBox_TextChanged"/>
+        <TextBox 
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="69,111,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120"/>
+        <TextBox 
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="69,164,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120"/>
+        <Button 
+            Content="Добавить" 
+            HorizontalAlignment="Left" 
+            Margin="69,254,0,0" 
+            VerticalAlignment="Top" 
+            Width="120" Click="ButtonAddClick"/>
+        <Label 
+            Content="Название товара" 
+            HorizontalAlignment="Left" 
+            Margin="69,30,0,0" 
+            VerticalAlignment="Top" 
+            Width="120"/>
+        <Label 
+            Content="Стоимость" 
+            HorizontalAlignment="Left" 
+            Margin="69,85,0,0" 
+            VerticalAlignment="Top" 
+            Width="120"/>
+        <Label 
+            Content="Количество" 
+            HorizontalAlignment="Left" 
+            Margin="69,138,0,0" 
+            VerticalAlignment="Top" 
+            Width="120"/>
+
     </Grid>
 </Window>

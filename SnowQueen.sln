@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowQueen", "SnowQueen\SnowQueen.csproj", "{453F9C66-D782-4313-8A0F-E3F2DCD8CAB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowQueenWPF", "SnowQueen\SnowQueenWPF.csproj", "{453F9C66-D782-4313-8A0F-E3F2DCD8CAB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFService", "WCFService\WCFService.csproj", "{B131ED6F-25F4-461B-94AD-CFF5E0C500E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFEF", "WPFEF\WPFEF.csproj", "{0411979B-29B2-4949-93C2-60F6342ED6D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{453F9C66-D782-4313-8A0F-E3F2DCD8CAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{453F9C66-D782-4313-8A0F-E3F2DCD8CAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{453F9C66-D782-4313-8A0F-E3F2DCD8CAB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B131ED6F-25F4-461B-94AD-CFF5E0C500E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B131ED6F-25F4-461B-94AD-CFF5E0C500E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B131ED6F-25F4-461B-94AD-CFF5E0C500E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B131ED6F-25F4-461B-94AD-CFF5E0C500E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0411979B-29B2-4949-93C2-60F6342ED6D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0411979B-29B2-4949-93C2-60F6342ED6D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0411979B-29B2-4949-93C2-60F6342ED6D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0411979B-29B2-4949-93C2-60F6342ED6D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{453F9C66-D782-4313-8A0F-E3F2DCD8CAB0}</ProjectGuid>
+    <ProjectGuid>{0411979B-29B2-4949-93C2-60F6342ED6D9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SnowQueen</RootNamespace>
-    <AssemblyName>SnowQueen</AssemblyName>
+    <RootNamespace>WPFEF</RootNamespace>
+    <AssemblyName>WPFEF</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
