@@ -8,14 +8,15 @@
         Title="SaveToDB" Height="323.127" Width="247.753">
     <Grid Margin="0,0,2,0">
         <TextBox 
+            Name="ProductName"
             HorizontalAlignment="Left" 
             Height="23" 
             Margin="69,56,0,0" 
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
-            Width="120" 
-            TextChanged="TextBox_TextChanged"/>
+            Width="120"/>
         <TextBox 
+            Name="PriceProduct"
             HorizontalAlignment="Left" 
             Height="23" 
             Margin="69,111,0,0" 
@@ -23,6 +24,7 @@
             VerticalAlignment="Top" 
             Width="120"/>
         <TextBox 
+            Name="CountProduct"
             HorizontalAlignment="Left" 
             Height="23" 
             Margin="69,164,0,0" 

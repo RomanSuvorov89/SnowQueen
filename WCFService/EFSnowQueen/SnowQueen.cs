@@ -5,9 +5,9 @@ namespace WCFService.EFSnowQueen
 	using System.ComponentModel.DataAnnotations.Schema;
 	using System.Linq;
 
-	public partial class EFSnowQueen : DbContext
+	public partial class SnowQueen : DbContext
 	{
-		public EFSnowQueen()
+		public SnowQueen()
 			: base("name=EFSnowQueen")
 		{
 		}

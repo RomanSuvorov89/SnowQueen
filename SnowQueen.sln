@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowQueenWPF", "SnowQueen\SnowQueenWPF.csproj", "{453F9C66-D782-4313-8A0F-E3F2DCD8CAB0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B131ED6F-25F4-461B-94AD-CFF5E0C500E3} = {B131ED6F-25F4-461B-94AD-CFF5E0C500E3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFService", "WCFService\WCFService.csproj", "{B131ED6F-25F4-461B-94AD-CFF5E0C500E3}"
 EndProject

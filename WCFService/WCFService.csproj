@@ -69,23 +69,22 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SnowQueenService.svc" />
+    <Content Include="Services\SnowQueenService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EFSnowQueen\EFSnowQueen.cs" />
+    <Compile Include="EFSnowQueen\SnowQueen.cs" />
     <Compile Include="EFSnowQueen\Orders.cs" />
     <Compile Include="EFSnowQueen\Products.cs" />
-    <Compile Include="ISnowQueenService.cs" />
+    <Compile Include="Services\ISnowQueenService.cs" />
     <Compile Include="Model\MainModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SnowQueenService.svc.cs">
+    <Compile Include="Services\SnowQueenService.svc.cs">
       <DependentUpon>SnowQueenService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
