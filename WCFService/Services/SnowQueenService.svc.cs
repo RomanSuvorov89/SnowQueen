@@ -12,20 +12,22 @@ namespace WCFService.Services
 {
 	public class SnowQueenService : IShowData, IAddData
 	{
-		ObservableCollection<MainModel> _dataDb = new ObservableCollection<MainModel>();
 		public ObservableCollection<MainModel> Show()
 		{
+			var dataDb = new ObservableCollection<MainModel>();
 			try
 			{
 				using (var db = new SnowQueen())
 				{
 					foreach (var order in db.Orders)
 					{
-						MainModel model = new MainModel();
-						model.Name = order.Products.productName;
-						model.Count = order.countOfProduct.GetValueOrDefault(0);
-						model.Price = Convert.ToDouble(order.priceOfProduct.GetValueOrDefault(0));
-						_dataDb.Add(model);
+						var model = new MainModel
+						{
+							Name = order.Products.productName,
+							Count = order.countOfProduct.GetValueOrDefault(0),
+							Price = Convert.ToDouble(order.priceOfProduct.GetValueOrDefault(0))
+						};
+						dataDb.Add(model);
 					}
 				}
 			}
@@ -33,7 +35,7 @@ namespace WCFService.Services
 			{
 				// ignored
 			}
-			return _dataDb;
+			return dataDb;
 		}
 		public void Add(MainModel mainModel)
 		{
