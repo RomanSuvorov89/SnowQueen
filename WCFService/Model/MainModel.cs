@@ -1,30 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
 namespace WCFService.Model
 {
-	public class MainModel
+	public class MainModel : INotifyPropertyChanged
 	{
-		private string Name { get; set; }
-		private double Price { get; set; }
-		private int Count { get; set; }
+		private string name;
+		private double price;
+		private int count;
 
-		public string name
+		public string Name
 		{
-			get => Name;
-			set => Name = value;
+			get { return name; }
+			set
+			{
+				name = value;
+				OnPropertyChanged("Name");
+			}
 		}
-		public double price
+
+		public double Price
 		{
-			get => Price;
-			set => Price = value;
+			get { return price; }
+			set
+			{
+				price = value;
+				OnPropertyChanged("Price");
+			}
 		}
-		public int count
+		public int Count
 		{
-			get => Count;
-			set => Count = value;
+			get { return count; }
+			set
+			{
+				count = value;
+				OnPropertyChanged("Count");
+			}
+		}
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		private void OnPropertyChanged(string property)
+		{
+			if (PropertyChanged != null) 
+				PropertyChanged(this, new PropertyChangedEventArgs(property));
 		}
 	}
 }

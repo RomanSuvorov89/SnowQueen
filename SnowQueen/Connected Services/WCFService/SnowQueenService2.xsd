@@ -8,9 +8,9 @@
   <xs:element name="ArrayOfMainModel" nillable="true" type="tns:ArrayOfMainModel" />
   <xs:complexType name="MainModel">
     <xs:sequence>
-      <xs:element minOccurs="0" name="count" type="xs:int" />
-      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="price" type="xs:double" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MainModel" nillable="true" type="tns:MainModel" />

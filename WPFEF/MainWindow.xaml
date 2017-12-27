@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFEF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="ShowFromDB" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.8*" />
+        </Grid.ColumnDefinitions>
+
+
+                <ListBox 
+                    Grid.Column="0" ItemsSource="{Binding DataViewModel}"
+                    SelectedItem="{Binding SelectedData}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="5">
+                                <TextBlock FontSize="18" Text="{Binding Path=Name}" />
+                                <TextBlock Text="{Binding Path=Count}" />
+                                <TextBlock Text="{Binding Path=Price}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+
+        <StackPanel Grid.Column="1" DataContext="{Binding SelectedData}">
+            <TextBlock Text="Выбранный элемент"  />
+            <TextBlock Text="Наименование" />
+            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" IsReadOnly="True" />
+            <TextBlock Text="Количество" />
+            <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" IsReadOnly="True"/>
+            <TextBlock Text="Цена" />
+            <TextBox Text="{Binding Price, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" IsReadOnly="True"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f31f247d-884e-4ade-88eb-4835ed3fcd0e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4f0b542b-34f2-40cf-a6fd-915b88b5e650" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:39449/Services/SnowQueenService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SnowQueenService.xsd" MetadataType="Schema" ID="acc8bd49-1597-420e-9e9f-074ec0f0b7d9" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd1" />
-    <MetadataFile FileName="SnowQueenService.disco" MetadataType="Disco" ID="d7ae7a9a-78fd-4637-a2d2-9cceef8a94d2" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?disco" />
-    <MetadataFile FileName="SnowQueenService1.xsd" MetadataType="Schema" ID="b6915c5f-46a5-4396-be7c-ec707c9feb48" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd0" />
-    <MetadataFile FileName="SnowQueenService2.xsd" MetadataType="Schema" ID="5f1af81a-6b26-4cbd-ba99-2f755b8dc871" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd2" />
-    <MetadataFile FileName="SnowQueenService.wsdl" MetadataType="Wsdl" ID="c6aca835-3623-447c-ae83-252a99bc76c5" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?wsdl" />
+    <MetadataFile FileName="SnowQueenService.xsd" MetadataType="Schema" ID="8a1cdb17-09e9-4e62-944e-8ba2e847c773" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SnowQueenService.disco" MetadataType="Disco" ID="b5a23788-20c5-43fb-8657-5ca2cb210c89" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?disco" />
+    <MetadataFile FileName="SnowQueenService1.xsd" MetadataType="Schema" ID="0a3440c5-bf00-4d00-8837-389c109659c0" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SnowQueenService2.xsd" MetadataType="Schema" ID="845b2046-a928-4ff6-8497-f8602e0d7d47" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SnowQueenService.wsdl" MetadataType="Wsdl" ID="e1fb87fe-35c3-4d85-a44f-e3ef39ba147d" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

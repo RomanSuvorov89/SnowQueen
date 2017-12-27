@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SnowQueen.SnowQueenService {
+namespace WPFEF.WCFService {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,13 +23,13 @@ namespace SnowQueen.SnowQueenService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int countField;
+        private int CountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
+        private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double priceField;
+        private double PriceField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -42,40 +42,40 @@ namespace SnowQueen.SnowQueenService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int count {
+        public int Count {
             get {
-                return this.countField;
+                return this.CountField;
             }
             set {
-                if ((this.countField.Equals(value) != true)) {
-                    this.countField = value;
-                    this.RaisePropertyChanged("count");
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
+        public string Name {
             get {
-                return this.nameField;
+                return this.NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public double price {
+        public double Price {
             get {
-                return this.priceField;
+                return this.PriceField;
             }
             set {
-                if ((this.priceField.Equals(value) != true)) {
-                    this.priceField = value;
-                    this.RaisePropertyChanged("price");
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
                 }
             }
         }
@@ -91,23 +91,23 @@ namespace SnowQueen.SnowQueenService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SnowQueenService.IShowData")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WCFService.IShowData")]
     public interface IShowData {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IShowData/Show", ReplyAction="http://tempuri.org/IShowData/ShowResponse")]
-        SnowQueen.SnowQueenService.MainModel[] Show();
+        System.Collections.ObjectModel.ObservableCollection<WPFEF.WCFService.MainModel> Show();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IShowData/Show", ReplyAction="http://tempuri.org/IShowData/ShowResponse")]
-        System.Threading.Tasks.Task<SnowQueen.SnowQueenService.MainModel[]> ShowAsync();
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<WPFEF.WCFService.MainModel>> ShowAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IShowDataChannel : SnowQueen.SnowQueenService.IShowData, System.ServiceModel.IClientChannel {
+    public interface IShowDataChannel : WPFEF.WCFService.IShowData, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ShowDataClient : System.ServiceModel.ClientBase<SnowQueen.SnowQueenService.IShowData>, SnowQueen.SnowQueenService.IShowData {
+    public partial class ShowDataClient : System.ServiceModel.ClientBase<WPFEF.WCFService.IShowData>, WPFEF.WCFService.IShowData {
         
         public ShowDataClient() {
         }
@@ -128,33 +128,33 @@ namespace SnowQueen.SnowQueenService {
                 base(binding, remoteAddress) {
         }
         
-        public SnowQueen.SnowQueenService.MainModel[] Show() {
+        public System.Collections.ObjectModel.ObservableCollection<WPFEF.WCFService.MainModel> Show() {
             return base.Channel.Show();
         }
         
-        public System.Threading.Tasks.Task<SnowQueen.SnowQueenService.MainModel[]> ShowAsync() {
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<WPFEF.WCFService.MainModel>> ShowAsync() {
             return base.Channel.ShowAsync();
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SnowQueenService.IAddData")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WCFService.IAddData")]
     public interface IAddData {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAddData/Add", ReplyAction="http://tempuri.org/IAddData/AddResponse")]
-        void Add(SnowQueen.SnowQueenService.MainModel mainModel);
+        void Add(WPFEF.WCFService.MainModel mainModel);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAddData/Add", ReplyAction="http://tempuri.org/IAddData/AddResponse")]
-        System.Threading.Tasks.Task AddAsync(SnowQueen.SnowQueenService.MainModel mainModel);
+        System.Threading.Tasks.Task AddAsync(WPFEF.WCFService.MainModel mainModel);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAddDataChannel : SnowQueen.SnowQueenService.IAddData, System.ServiceModel.IClientChannel {
+    public interface IAddDataChannel : WPFEF.WCFService.IAddData, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AddDataClient : System.ServiceModel.ClientBase<SnowQueen.SnowQueenService.IAddData>, SnowQueen.SnowQueenService.IAddData {
+    public partial class AddDataClient : System.ServiceModel.ClientBase<WPFEF.WCFService.IAddData>, WPFEF.WCFService.IAddData {
         
         public AddDataClient() {
         }
@@ -175,11 +175,11 @@ namespace SnowQueen.SnowQueenService {
                 base(binding, remoteAddress) {
         }
         
-        public void Add(SnowQueen.SnowQueenService.MainModel mainModel) {
+        public void Add(WPFEF.WCFService.MainModel mainModel) {
             base.Channel.Add(mainModel);
         }
         
-        public System.Threading.Tasks.Task AddAsync(SnowQueen.SnowQueenService.MainModel mainModel) {
+        public System.Threading.Tasks.Task AddAsync(WPFEF.WCFService.MainModel mainModel) {
             return base.Channel.AddAsync(mainModel);
         }
     }

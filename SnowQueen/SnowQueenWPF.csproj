@@ -65,7 +65,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Connected Services\SnowQueenService\Reference.cs">
+    <Compile Include="Connected Services\WCFService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -76,7 +76,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\MainModel.cs" />
+    <Compile Include="Model\EnabledButton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,17 +94,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\SnowQueenService\SnowQueen.SnowQueenService.MainModel.datasource">
+    <None Include="Connected Services\WCFService\SnowQueen.WCFService.MainModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\SnowQueenService\SnowQueenService.wsdl" />
-    <None Include="Connected Services\SnowQueenService\SnowQueenService.xsd">
+    <None Include="Connected Services\WCFService\SnowQueenService.wsdl" />
+    <None Include="Connected Services\WCFService\SnowQueenService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SnowQueenService\SnowQueenService1.xsd">
+    <None Include="Connected Services\WCFService\SnowQueenService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SnowQueenService\SnowQueenService2.xsd">
+    <None Include="Connected Services\WCFService\SnowQueenService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -119,19 +119,23 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\SnowQueenService\" />
+    <Resource Include="images\not.png" />
+    <Resource Include="images\ok.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SnowQueenService\SnowQueenService.disco" />
+    <WCFMetadataStorage Include="Connected Services\WCFService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SnowQueenService\configuration91.svcinfo" />
+    <None Include="Connected Services\WCFService\SnowQueenService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SnowQueenService\configuration.svcinfo" />
+    <None Include="Connected Services\WCFService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SnowQueenService\Reference.svcmap">
+    <None Include="Connected Services\WCFService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WCFService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

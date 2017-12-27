@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="kf9iH0KLL3ZwYmkbNy5xDYTUfXc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ufz3YrTlpiNfDexRY++00pdJK1A=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IShowData">
       <properties>
@@ -221,7 +221,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IShowData" contract="SnowQueenService.IShowData" bindingType="basicHttpBinding" address="http://localhost:39449/Services/SnowQueenService.svc" bindingConfiguration="BasicHttpBinding_IShowData">
+    <endpoint name="BasicHttpBinding_IShowData" contract="WCFService.IShowData" bindingType="basicHttpBinding" address="http://localhost:39449/Services/SnowQueenService.svc" bindingConfiguration="BasicHttpBinding_IShowData">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:39449/Services/SnowQueenService.svc</serializedValue>
@@ -236,7 +236,7 @@
           <serializedValue>BasicHttpBinding_IShowData</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>SnowQueenService.IShowData</serializedValue>
+          <serializedValue>WCFService.IShowData</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -306,7 +306,7 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpBinding_IAddData" contract="SnowQueenService.IAddData" bindingType="basicHttpBinding" address="http://localhost:39449/Services/SnowQueenService.svc" bindingConfiguration="BasicHttpBinding_IAddData">
+    <endpoint name="BasicHttpBinding_IAddData" contract="WCFService.IAddData" bindingType="basicHttpBinding" address="http://localhost:39449/Services/SnowQueenService.svc" bindingConfiguration="BasicHttpBinding_IAddData">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:39449/Services/SnowQueenService.svc</serializedValue>
@@ -321,7 +321,7 @@
           <serializedValue>BasicHttpBinding_IAddData</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>SnowQueenService.IAddData</serializedValue>
+          <serializedValue>WCFService.IAddData</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

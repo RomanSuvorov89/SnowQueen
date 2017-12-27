@@ -4,39 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SnowQueen"
+        xmlns:model="clr-namespace:SnowQueen.Model"
         mc:Ignorable="d"
         Title="SaveToDB" Height="323.127" Width="247.753">
     <Grid Margin="0,0,2,0">
         <TextBox 
-            Name="ProductName"
-            HorizontalAlignment="Left" 
-            Height="23" 
+            Name="ProductName" 
             Margin="69,56,0,0" 
-            TextWrapping="Wrap" 
+            TextWrapping="Wrap"
+            TextChanged="ProductName_OnTextChanged" 
+            Height="23" 
             VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
             Width="120"/>
         <TextBox 
-            Name="PriceProduct"
-            HorizontalAlignment="Left" 
-            Height="23" 
+            Name="PriceProduct" 
             Margin="69,111,0,0" 
             TextWrapping="Wrap" 
-            VerticalAlignment="Top" 
-            Width="120"/>
-        <TextBox 
-            Name="CountProduct"
-            HorizontalAlignment="Left" 
             Height="23" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
+            Width="120"
+            TextChanged="PriceProduct_OnTextChanged"/>
+        <TextBox 
+            Name="CountProduct" 
             Margin="69,164,0,0" 
             TextWrapping="Wrap" 
+            Height="23" 
             VerticalAlignment="Top" 
-            Width="120"/>
-        <Button 
-            Content="Добавить" 
             HorizontalAlignment="Left" 
+            Width="120"
+            TextChanged="CountProduct_OnTextChanged"/>
+        <Button 
+            Name="AddButton"
+            Content="Добавить" 
             Margin="69,254,0,0" 
+            Click="ButtonAddClick" 
+            Height="20" 
             VerticalAlignment="Top" 
-            Width="120" Click="ButtonAddClick"/>
+            HorizontalAlignment="Left" 
+            Width="120"/>
         <Label 
             Content="Название товара" 
             HorizontalAlignment="Left" 
@@ -55,6 +62,30 @@
             Margin="69,138,0,0" 
             VerticalAlignment="Top" 
             Width="120"/>
+        <Image
+            Name="ImgPName" 
+            Margin="205,56,0,0"
+            Source="/images/not.png" 
+            Height="23" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
+            Width="23"/>
+        <Image 
+            Name="ImgPPrice" 
+            Margin="205,111,0,0"
+            Source="/images/not.png"
+            Height="23" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
+            Width="23"/>
+        <Image 
+            Name="ImgPCount" 
+            Margin="205,164,0,0" 
+            HorizontalAlignment="Left"
+            Source="/images/not.png"
+            Width="23" 
+            Height="23" 
+            VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

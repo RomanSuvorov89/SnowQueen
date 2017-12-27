@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d87b066-07c4-4c9f-b551-379373ff5eea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:39449/Services/SnowQueenService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SnowQueenService.xsd" MetadataType="Schema" ID="27b24b63-7305-4b73-b4c1-a1d9c4a26d95" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SnowQueenService.disco" MetadataType="Disco" ID="e16a034e-edf1-4414-ae32-d4e452f98e8b" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?disco" />
+    <MetadataFile FileName="SnowQueenService1.xsd" MetadataType="Schema" ID="e9e200ba-f9d3-4e51-adb9-dc3155954b69" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SnowQueenService2.xsd" MetadataType="Schema" ID="db913998-22c8-4086-b9b2-fa6a48a8fb19" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SnowQueenService.wsdl" MetadataType="Wsdl" ID="1383387e-b843-4bbc-8e95-05739d1f296b" SourceId="1" SourceUrl="http://localhost:39449/Services/SnowQueenService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

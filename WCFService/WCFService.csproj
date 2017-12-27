@@ -76,8 +76,8 @@
     <Compile Include="EFSnowQueen\SnowQueen.cs" />
     <Compile Include="EFSnowQueen\Orders.cs" />
     <Compile Include="EFSnowQueen\Products.cs" />
-    <Compile Include="Services\ISnowQueenService.cs" />
     <Compile Include="Model\MainModel.cs" />
+    <Compile Include="Services\ISnowQueenService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SnowQueenService.svc.cs">
       <DependentUpon>SnowQueenService.svc</DependentUpon>
