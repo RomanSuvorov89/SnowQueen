@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Linq;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
 using SnowQueen.Model;
 using SnowQueen.WCFService;
 
@@ -41,9 +44,11 @@ namespace SnowQueen
 			IAddData newData = new AddDataClient();
 			newData.Add(mainModel);
 
-			ProductName.Text = "";
-			PriceProduct.Text = "";
-			CountProduct.Text = "";
+			WriteFile(mainModel);
+
+				ProductName.Text = "";
+				PriceProduct.Text = "";
+				CountProduct.Text = "";
 		}
 
 		private void ProductName_OnTextChanged(object sender, TextChangedEventArgs e)
@@ -95,6 +100,16 @@ namespace SnowQueen
 			}
 			ImgPCount.Source = new BitmapImage(new Uri(imgSource, UriKind.Relative));
 			AddButton.IsEnabled = EnabledButton.IsCorrect();
+		}
+
+		private void WriteFile(MainModel mainModel)
+		{
+			string currentFile = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\SnowQueen.txt";
+			if (!File.Exists(currentFile))
+			{
+				File.Create(currentFile);
+			}
+			File.AppendAllText(currentFile, "\r\n" + JsonConvert.SerializeObject(mainModel, Formatting.None));
 		}
 	}
 }

@@ -17,27 +17,55 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="0.8*" />
+            <ColumnDefinition Width="158*" />
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="230*" />
         </Grid.ColumnDefinitions>
 
+        <TabControl Grid.ColumnSpan="2">
+            <TabItem Header="From DB" Margin="-2,-2,-39,0">
+                <TabItem.Content>
+                    <ListBox 
+                        Grid.Column="0" ItemsSource="{Binding DataViewModel}"
+                        SelectedItem="{Binding SelectedData}" Grid.ColumnSpan="2" Margin="-3,-3,-3,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="5">
+                                    <TextBlock FontSize="18" Text="{Binding Path=Name}" />
+                                    <TextBlock Text="{Binding Path=Count}" />
+                                    <TextBlock Text="{Binding Path=Price}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="Uniques from txt" Margin="38,-2,-39,0">
+                <TabItem.Content>
+                    <ListBox 
+                        Grid.Column="0" ItemsSource="{Binding TextViewModel}"
+                        SelectedItem="{Binding SelectedData}" Grid.ColumnSpan="2" Margin="-3,-3,-3,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="5">
+                                    <TextBlock FontSize="18" Text="{Binding Path=Name}" />
+                                    <TextBlock Text="{Binding Path=Count}" />
+                                    <TextBlock Text="{Binding Path=Price}" />
+                                    <Button Click="AddButton"
+                                            Content="Добавить"
+                                            Tag="{Binding}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
 
-                <ListBox 
-                    Grid.Column="0" ItemsSource="{Binding DataViewModel}"
-                    SelectedItem="{Binding SelectedData}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="5">
-                                <TextBlock FontSize="18" Text="{Binding Path=Name}" />
-                                <TextBlock Text="{Binding Path=Count}" />
-                                <TextBlock Text="{Binding Path=Price}" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+        
 
 
-        <StackPanel Grid.Column="1" DataContext="{Binding SelectedData}">
+        <StackPanel Grid.Column="2" DataContext="{Binding SelectedData}">
             <TextBlock Text="Выбранный элемент"  />
             <TextBlock Text="Наименование" />
             <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" IsReadOnly="True" />
