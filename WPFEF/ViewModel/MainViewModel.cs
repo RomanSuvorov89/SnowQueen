@@ -51,25 +51,32 @@ namespace WPFEF.ViewModel
 		{
 			string currentFile = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\SnowQueen.txt";
 			ObservableCollection<MainModel> textViewModel = new ObservableCollection<MainModel>();
-			string[] dataFile = File.ReadAllLines(currentFile);
-			foreach (var lineData in dataFile)
+			if (File.Exists(currentFile))
 			{
-				try
+				string[] dataFile = File.ReadAllLines(currentFile);
+				foreach (var lineData in dataFile)
 				{
-					JObject jObject = JObject.Parse(lineData);
-					textViewModel.Add(new MainModel
+					try
 					{
-						Name = jObject.Value<string>("Name"),
-						Price = jObject.Value<double>("Price"),
-						Count = jObject.Value<int>("Count")
-				});
+						JObject jObject = JObject.Parse(lineData);
+						textViewModel.Add(new MainModel
+						{
+							Name = jObject.Value<string>("Name"),
+							Price = jObject.Value<double>("Price"),
+							Count = jObject.Value<int>("Count")
+						});
+					}
+					catch
+					{
+						throw;
+					}
 				}
-				catch
-				{
-					throw;
-				}
+				return FindUniqueData(textViewModel);
 			}
-			return FindUniqueData(textViewModel);
+			else
+			{
+				return textViewModel;
+			}
 		}
 
 		private ObservableCollection<MainModel> FindUniqueData(ObservableCollection<MainModel> textViewModel)
