@@ -6,9 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Input;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using WPFEF.Annotations;
+using WPFEF.Command;
 using WPFEF.WCFService;
 
 namespace WPFEF.ViewModel
@@ -19,7 +21,6 @@ namespace WPFEF.ViewModel
 		{
 			IShowData data = new ShowDataClient();
 			DataViewModel = data.Show();
-
 			TextViewModel = GetDataFromTXT();
 		}
 
@@ -92,7 +93,27 @@ namespace WPFEF.ViewModel
 				
 			}
 			return uniqueDataCollection;
+		}
 
+		private AddCommand addCommand;
+
+		public AddCommand AddCommand
+		{
+			get
+			{
+				return addCommand ??
+				       (addCommand = new AddCommand(obj=>
+				       {
+					       MainModel model = obj as MainModel;
+					       if (model != null)
+					       {
+						       DataViewModel.Add(model);
+						       TextViewModel.Remove(model);
+						       IAddData newData = new AddDataClient();
+						       newData.Add(model);
+						   }
+				       }));
+			}
 		}
 	}
 }

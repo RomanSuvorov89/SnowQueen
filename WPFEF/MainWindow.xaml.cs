@@ -27,19 +27,5 @@ namespace WPFEF
 			InitializeComponent();
 			DataContext = new MainViewModel();
 		}
-
-		private void AddButton(object sender, RoutedEventArgs e)
-		{
-			var selectedData = ((Button)sender).Tag;
-			var mainModel = selectedData as MainModel;
-			IAddData newData = new AddDataClient();
-			newData.Add(mainModel);
-			ReloadWindow();
-		}
-
-		private void ReloadWindow()
-		{
-			DataContext = new MainViewModel();
-		}
 	}
 }
